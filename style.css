@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+  display:grid;
+  place-content: center;
+  min-height: 100vh;
+
+  /* animation: moveBg 1s linear infinite; */
+
+  /* propriedade rocketseat */
+  background-size: 200% 200%; 
+  animation: gradient 10s ease infinite;
+}
+
+#closed-cookie, #opened-cookie {
+  background-color: white;
+  max-width: 428px;
+  text-align: center;
+
+  border-radius: 5px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+#closed-cookie {
+  padding: 3rem 4rem 4rem;
+}
+
+#opened-cookie {
+  padding: 3rem 4rem;
+}
+
+#closed-cookie .container {
+  padding: 0 1.25rem;
+}
+
+#opened-cookie .container {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #34355B;
+  margin-bottom: 0.875rem;
+}
+
+p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9375rem;
+  color: #34355B;
+
+  margin-bottom: 1.25rem;
+}
+
+#closed-cookie .container img:hover {
+  animation: moveCookie .1s infinite;
+}
+
+.message {
+  background: #E4EDF1;
+
+  padding: 0.625rem;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+
+  animation: openMessage .7s linear;
+}
+
+.message p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: black;
+
+  margin-bottom: 0;
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 0.9375rem;
+  color: white;
+  background-color: #ff9500;
+
+  border-radius: 4px;
+  padding: 1rem;
+
+  align-self: center;
+}
+
+@keyframes moveBg {
+  25% {
+    background: linear-gradient(30deg, #190361 0%, #B0F 100%);
+  }
+  50% {
+    background: linear-gradient(0deg, #190361 0%, #B0F 100%);
+  }
+  75%{
+    background: linear-gradient(-30deg, #190361 0%, #B0F 100%);
+  }
+  100% {
+    background: linear-gradient(-45deg, #190361 0%, #B0F 100%);
+  }
+}
+
+/* animacao rocketseat */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes moveCookie {
+  75% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes openMessage {
+  0% {
+    transform: translateY(150px) scale(.1);
+  }
+}
