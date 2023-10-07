@@ -15,7 +15,7 @@ body {
 
   /* propriedade rocketseat */
   background-size: 200% 200%; 
-  animation: gradient 10s ease infinite;
+  animation: gradient 5s ease infinite;
 }
 
 #closed-cookie, #opened-cookie {
@@ -139,5 +139,19 @@ button {
 @keyframes openMessage {
   0% {
     transform: translateY(150px) scale(.1);
+  }
+}
+
+
+@media (max-width: 450px) {
+  #closed-cookie,
+  #opened-cookie {
+    max-width: 90%;
+    /* por que preciso do margin 0 auto se o body ta grid? */
+    margin: 0 auto;
+  }
+
+  #closed-cookie {
+    padding: 1.5rem 2rem 2rem;
   }
 }
